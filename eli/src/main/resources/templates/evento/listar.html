@@ -1,0 +1,19 @@
+<a href="/grupo/criar">Adicionar Grupo</a>
+<table border="1">
+    <tr>
+        <th>#</th>
+        <th>Nome do grupo</th>
+        <th>Responsável</th>
+        <th>E-mail de Contato</th>
+
+    </tr>
+    <tr th:each="tarefa : ${listaGruposNoFront}">
+        <td th:text="${tarefa.id}"></td>
+        <td th:text="${tarefa.nomeGrupo}"></td>
+        <td th:text="${tarefa.responsavel}"></td>
+        <td th:text="${tarefa.email}"></td>
+        <td>
+            <a th:href="@{/grupo/alterar/{id}(id=${tarefa.id})}">Alterar</a>
+        </td>
+    </tr>
+</table>
