@@ -30,7 +30,7 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     @Column(name = "sexo", nullable = false)
     @ColumnDefault("3")
     private Sexo sexo = Sexo.NAO_INFORMADO;
